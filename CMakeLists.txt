@@ -35,7 +35,10 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(U4T2 U4T2.c )
+add_executable(
+    U4T2 U4T2.c
+    neopixel/neopixel.c
+)
 
 pico_set_program_name(U4T2 "U4T2")
 pico_set_program_version(U4T2 "0.1")
@@ -49,6 +52,7 @@ target_link_libraries(
     U4T2
     pico_stdlib
     hardware_pwm
+    hardware_pio
 )
 
 # Add the standard include files to the build
