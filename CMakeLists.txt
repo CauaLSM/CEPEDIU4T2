@@ -28,57 +28,38 @@ set(PICO_BOARD pico_w CACHE STRING "Board type")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(U4T1 C CXX ASM)
+project(U4T2 C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(
-    U4T1
-    U4T1.c
-    keypad/keypad.c
-    functions/tecla1.c
-    functions/tecla2.c
-    functions/tecla3.c
-    functions/Tecla4.c
-    functions/tecla5.c
-    functions/Tecla6.c
-    functions/Tecla7.c
-    functions/Tecla8.c
-    functions/tecla9.c
-    functions/teclaA.c
-    functions/teclaB.c
-    functions/teclac.c
-    functions/tecla_asterisco.c
-    neopixel/neopixel.c
-)
+add_executable(U4T2 U4T2.c )
 
-pico_set_program_name(U4T1 "U4T1")
-pico_set_program_version(U4T1 "0.1")
+pico_set_program_name(U4T2 "U4T2")
+pico_set_program_version(U4T2 "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(U4T1 0)
-pico_enable_stdio_usb(U4T1 1)
+pico_enable_stdio_uart(U4T2 0)
+pico_enable_stdio_usb(U4T2 1)
 
 # Add the standard library to the build
 target_link_libraries(
-    U4T1
+    U4T2
     pico_stdlib
     hardware_pwm
-    hardware_pio
 )
 
 # Add the standard include files to the build
-target_include_directories(U4T1 PRIVATE
+target_include_directories(U4T2 PRIVATE
   ${CMAKE_CURRENT_LIST_DIR}
 )
 
 # Add any user requested libraries
-target_link_libraries(U4T1 
+target_link_libraries(U4T2 
         
         )
 
-pico_add_extra_outputs(U4T1)
+pico_add_extra_outputs(U4T2)
 
