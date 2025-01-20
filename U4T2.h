@@ -6,7 +6,9 @@
 #include "functions/functions.h"
 #include "hardware/gpio.h"
 #include "hardware/pwm.h"
+#include <tusb.h>
 
+#include "neopixel/neopixel.h"
 
 #define LED_VERDE       11
 #define LED_AZUL        12
