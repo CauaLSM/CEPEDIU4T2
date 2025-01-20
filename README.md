@@ -83,9 +83,6 @@ U4T2/
 └── pico_sdk_import.cmake
 ```
 
-## Esquemático
-![image](https://github.com/user-attachments/assets/03feff71-5d39-4a19-8b36-b759d5313f9d)
-
 ## 🎉 Divirta-se explorando e modificando o projeto!
 
 # 👥 Atribuições de cada Membro
