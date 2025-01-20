@@ -43,7 +43,8 @@ add_executable(
     functions/LED_AZUL.c
     functions/Ledverde.c 
     functions/Piscar_Todos_Leds.c 
-    functions/ledvermelho.c
+    functions/ledvermelho.c 
+    functions/frequency.c
 )
 
 pico_set_program_name(U4T2 "U4T2")

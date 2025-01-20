@@ -2,12 +2,12 @@
 
 void Acionar_Buzzer() {
     // Ativar o buzzer
-    gpio_put(BUZZER,1);  
+    play_tone(BUZZER,1000,2000);
 
     // Espera de 2 segundos
-    sleep_ms(2000);  
+    sleep_ms(6000);  
+    gpio_put(BUZZER,0);
 
     // Desativar o buzzer
-    gpio_put(BUZZER, 0);
-    sleep_ms(100);
+   
 }

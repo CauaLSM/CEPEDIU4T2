@@ -14,7 +14,7 @@
 #define LED_AZUL        12
 #define LED_VERMELHO    13
 
-#define BUZZER          21
+#define BUZZER          10
 
 #define PWM_WRAP 1000
 #define PWM_CHAN 0

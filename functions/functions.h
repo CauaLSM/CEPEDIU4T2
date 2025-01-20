@@ -13,5 +13,6 @@
  void Ligar_tres_leds();
  void desligar_tudo();
  void Acionar_Buzzer();
+ void play_tone();
  
 #endif
