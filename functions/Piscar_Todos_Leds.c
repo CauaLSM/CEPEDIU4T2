@@ -1,4 +1,4 @@
-#define functions.h
+#include "functions.h"
 
 void Ligar_tres_leds()
 {

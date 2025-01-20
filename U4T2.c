@@ -5,68 +5,29 @@
 
 #include "U4T2.h"
 
-void initGpio() {
-  gpio_init(LED_AZUL);
-  gpio_init(LED_VERDE);
-  gpio_init(LED_VERMELHO);
-  // gpio_init(BUZZER);
-
-  gpio_set_dir(LED_AZUL, GPIO_OUT);
-  gpio_set_dir(LED_VERDE, GPIO_OUT);
-  gpio_set_dir(LED_VERMELHO, GPIO_OUT);
-}
-
-
 int main() {
-  stdio_init_all();
+  gpio_init(LED_VERDE);     
+    gpio_init(LED_AZUL);
+    gpio_init(LED_VERMELHO);  
+    gpio_init(BUZZER);
 
-  initGpio();
-  initNeoPixel();
+    gpio_set_dir(LED_VERDE, GPIO_OUT);
+    gpio_set_dir(LED_VERMELHO, GPIO_OUT);       
+    gpio_set_dir(LED_AZUL,GPIO_OUT);
 
-  while (!tud_cdc_connected()){
-    sleep_ms(100);
-  }
+    gpio_set_function(BUZZER, GPIO_FUNC_PWM);
+    uint slice_num = pwm_gpio_to_slice_num(BUZZER);
+    pwm_config config = pwm_get_default_config();
+    pwm_config_set_wrap(&config, PWM_WRAP);
+    pwm_init(slice_num, &config, true);
 
-
-  while(true) {
-    int numero;
-    printf("Digite um número de 0 a 9 e pressione enter: ");
-    scanf("%d", &numero);
-    printf("%d\n", numero);
-
-    switch(numero) {
-      case 0:
-        renderMatrix(CHAR_0);
-        break;
-      case 1:
-        renderMatrix(CHAR_1);
-        break;
-      case 2:
-        renderMatrix(CHAR_2);
-        break;
-      case 3:
-        renderMatrix(CHAR_3);
-        break;
-      case 4:
-        renderMatrix(CHAR_4);
-        break;
-      case 5:
-        renderMatrix(CHAR_5);
-        break;
-      case 6:
-        renderMatrix(CHAR_6);
-        break;
-      case 7:
-        renderMatrix(CHAR_7);
-        break;
-      case 8:
-        renderMatrix(CHAR_8);
-        break;
-      case 9:
-        renderMatrix(CHAR_9);
-        break;
-      default:
-        break;
-    }
-  }
+        while(true){
+          Ligar_led_verde();
+          Ligar_led_azul();
+          Ligar_led_vermelho();
+          Ligar_tres_leds();
+          desligar_tudo();
+          Acionar_Buzzer();
+          }
 }
+

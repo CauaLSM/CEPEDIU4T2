@@ -38,6 +38,12 @@ pico_sdk_init()
 add_executable(
     U4T2 U4T2.c
     neopixel/neopixel.c
+    functions/acionar_buzzer.c 
+    functions/desligartudo.c  
+    functions/LED_AZUL.c
+    functions/Ledverde.c 
+    functions/Piscar_Todos_Leds.c 
+    functions/ledvermelho.c
 )
 
 pico_set_program_name(U4T2 "U4T2")

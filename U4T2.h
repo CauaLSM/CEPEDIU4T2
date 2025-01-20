@@ -1,5 +1,5 @@
-#ifndef __U4T1_H_
-#define __U4T1_H_
+#ifndef __U4T2_H_
+#define __U4T2_H_
 
 #include <hardware/pwm.h>
 

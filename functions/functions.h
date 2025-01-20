@@ -7,18 +7,11 @@
 
 #include "../U4T2.h"
 
-void Tecla1();
-void tecla2();
-void tecla3();
-void Tecla4();
-void tecla5();
-void Tecla6();
-void Tecla7();
-void Tecla8();
-void tecla9();
-void teclaA();
-void teclaB();
-void teclac();
-void tecla_asterisco();
-
+ void Ligar_led_verde();
+ void Ligar_led_azul(); 
+ void Ligar_led_vermelho();
+ void Ligar_tres_leds();
+ void desligar_tudo();
+ void Acionar_Buzzer();
+ 
 #endif
