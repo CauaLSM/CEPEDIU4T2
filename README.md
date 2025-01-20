@@ -105,7 +105,7 @@ U4T2/
 
  ## 🔗 Link do Vídeo de Funcionamento:
 
-https://s31.aconvert.com/convert/p3r68-cdx67/qgj8e-wh2og.mp4
+https://drive.google.com/file/d/19HTTXfbOabOAVtP6ggNF7fL0BLMUxg4S/view?usp=drivesdk
 
 ## 📞 Contato
 
